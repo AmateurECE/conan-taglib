@@ -16,6 +16,7 @@ class TaglibConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = {"shared": False}
     generators = "cmake"
+    requires = "zlib/1.2.11@conan/stable"
 
     def source(self):
         self.run("git clone https://github.com/taglib/taglib")
